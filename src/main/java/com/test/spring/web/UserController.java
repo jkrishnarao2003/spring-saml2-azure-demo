@@ -7,15 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class HomeController {
+@RequestMapping(path = "/user")
+public class UserController {
 	
-	public HomeController() {
-		System.out.println("HomeController.HomeController()");
+	public UserController() {
+		System.out.println("UserController.UserController()");
 	}
 
-    @RequestMapping(path = "/home")
+	@RequestMapping(path = "/")
     public ModelAndView handle(HttpServletRequest request) {
     	System.out.println("HomeController.handle()");
-        return new ModelAndView("home");
+        return new ModelAndView("user/user");
     }
 }
