@@ -23,7 +23,7 @@ public class WebConfig implements WebMvcConfigurer {
 	@Override
     public void addViewControllers(ViewControllerRegistry registry) {
 		System.out.println("WebConfig.addViewControllers()");
-		registry.addViewController("/").setViewName("home");
+		registry.addViewController("/").setViewName("index");
         registry.addViewController("/error").setViewName("error");
     }
 	
@@ -33,10 +33,10 @@ public class WebConfig implements WebMvcConfigurer {
 		registry.jsp("/WEB-INF/view/", ".html");
 	}
 	
-	@Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/resources/**")
-                .addResourceLocations("/public", "classpath:/static/")
-                .setCacheControl(CacheControl.maxAge(Duration.ofDays(365)));
-    }
+//	@Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("/resources/**")
+//                .addResourceLocations("/public", "classpath:/static/")
+//                .setCacheControl(CacheControl.maxAge(Duration.ofDays(365)));
+//    }
 }
