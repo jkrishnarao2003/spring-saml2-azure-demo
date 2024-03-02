@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:mvc="http://www.springframework.org/schema/mvc"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
         http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/mvc
         https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!-- <mvc:annotation-driven /> -->
-    
-	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-	    <property name="prefix" value="/WEB-INF/view/"/>
-	    <property name="suffix" value=".html"/>
-	</bean>
-	
-    <mvc:view-controller path="/home.html" view-name="home"/>
-    <mvc:view-controller path="/error.html" view-name="error"/>
-
+	<mvc:annotation-driven />
+	<!-- <mvc:default-servlet-handler /> <mvc:view-controller path="/WEB-INF/view/home.html" 
+		view-name="home" /> <mvc:view-controller path="/WEB-INF/view/error.html" 
+		view-name="error" /> <mvc:view-resolvers> <mvc:jsp prefix="/WEB-INF/view/" 
+		suffix=".html" /> </mvc:view-resolvers> -->
 </beans>
